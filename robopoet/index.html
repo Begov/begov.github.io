@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/chips.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
+
+    <audio src="" id="audio"></audio>
+
+    <div id="choice-block">
+        <h3>Выберите один из вариантов</h3>
+        <div class="inputs">
+            <input type="radio" name="vote" id="vote-1" value="anton_samokhvalov" class="input-radio">
+            <label for="vote-1">Рассказ веселый</label>
+            <input type="radio" name="vote" id="vote-2" value="smoky" class="input-radio">
+            <label for="vote-2">Рассказ страшный</label>
+        </div>
+        <button id="apply">Применить</button>
+    </div>
 
     <div class="container">
         <div id="vk-banner">
@@ -30,7 +44,8 @@
         <div class="content" contenteditable="true" placeholder="Напишите начало истрии..."></div>
         <div class="buttons">
             <button id="generator">Продолжить рассказ</button>
-            <button id="update" disabled>Сменить текст</button>
+            <button id="update" disabled="false">Сменить текст</button>
+            <button id="audio-play" disabled>Озвучить</button>
         </div>
     </div>
 </body>

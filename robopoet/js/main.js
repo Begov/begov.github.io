@@ -2,6 +2,10 @@ let generator = document.querySelector('#generator'),
     update = document.querySelector('#update'),
     vkBanner = document.querySelector('#vk-banner'),
     close = document.querySelector('#close'),
+    apply = document.querySelector('#apply'),
+    choiceBlock = document.querySelector('#choice-block'),
+    audio = document.querySelector('#audio'),
+    audioPlay = document.querySelector('#audio-play'),
     content = document.querySelector('.content');
 
 let data = {
@@ -19,7 +23,7 @@ function getGeneratorString(){
         content.innerHTML += `<span class="span-content">${data.replies}</span>`;
         content.innerHTML += '&nbsp';
 
-        if(update.getAttribute('disabled') != null) update.removeAttribute('disabled');
+        if(update.disabled != false) update.disabled = false;
     });
 }
 
@@ -49,7 +53,7 @@ function updateData(){
             span.textContent = data.replies;
         });
 
-    } else update.setAttribute('disabled', 'true');
+    } else update.disabled = true;
 }
 
 generator.addEventListener('click', getGeneratorString);
@@ -57,9 +61,43 @@ generator.addEventListener('click', getGeneratorString);
 update.addEventListener('click', updateData);
 
 content.addEventListener('input', () => {
-    if(update.getAttribute('disabled') == null) update.setAttribute('disabled', 'true');
-})
+    if(update.disabled == false) update.disabled = true;
 
+    if(content.textContent != '') audioPlay.disabled = false;
+    else audioPlay.disabled = true;
+});
+
+audioPlay.addEventListener('click', () => {
+
+    choiceBlock.classList.add('show');
+
+});
+
+apply.addEventListener('click', () => {
+    let inputRadio = document.querySelectorAll('.input-radio');
+    let checked = false;
+
+    inputRadio.forEach( element => {
+        if(element.checked) {
+
+            checked = true;
+
+            audio.src = `https://apihost.ru/php/whatsapp.php?text=${content.textContent}&format=mp3&lang=ru-RU&speed=0.9&emotion=neutral&speaker=${element.value}`;
+
+            audio.onloadeddata = function() {
+                audio.play();
+            }
+
+            choiceBlock.classList.remove('show');
+
+            chips('success', 'Подождите немного');
+
+            return;
+        }
+    });
+
+    if(!checked) chips('error', 'Вы должны выбрать один из вариантов');
+});
 
 setTimeout(() => {
     vkBanner.classList.add('show')
