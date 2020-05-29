@@ -191,6 +191,34 @@ button {
     border-radius: 50%;
 }
 
+.pay {
+    p {
+        text-align: center;
+        font-size: 20px;
+        margin: 40px 0;
+    }
+    .pay-item {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 30px;
+        box-shadow: 0px 0px 20px #ccc;
+        .username, .message {
+            padding: 8px;
+            font-size: 16px;
+        }   
+        .username {
+            border-bottom: 1px solid #ccc;
+            background: #f7f7f7;
+            border-radius: 5px 5px 0 0;
+            .sum {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
 #vk-banner {
     position: fixed;
     bottom: 40px;
@@ -253,8 +281,17 @@ button {
             width: 100%;
         }
         a {
-            margin-top: 30px;
+            margin-top: 60px;
+            align-self: center;
             text-align: center;
+        }
+    }
+
+    .pay {
+        p {
+            text-align: center;
+            font-size: 20px;
+            margin-top: -20px;
         }
     }
 
@@ -290,6 +327,15 @@ button {
 
     .photo {
         width: 35px;
+    }
+
+    .pay {
+        p {
+            font-size: 17px;
+        }
+        .pay-item {
+            width: 90%;
+        }
     }
 
     #vk-banner p {
