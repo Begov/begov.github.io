@@ -17,7 +17,7 @@
         <h3>Выберите один из вариантов</h3>
         <div class="inputs">
             <input type="radio" name="vote" id="vote-1" value="anton_samokhvalov" class="input-radio">
-            <label for="vote-1">Рассказ веселый</label>
+            <label for="vote-1">Рассказ обычный</label>
             <input type="radio" name="vote" id="vote-2" value="smoky" class="input-radio">
             <label for="vote-2">Рассказ страшный</label>
         </div>
@@ -42,10 +42,13 @@
             </div>
         </div>
         <div class="content" contenteditable="true" placeholder="Напишите начало истрии..."></div>
-        <div class="buttons">
-            <button id="generator">Продолжить рассказ</button>
-            <button id="update" disabled="false">Сменить текст</button>
-            <button id="audio-play" disabled>Озвучить</button>
+        <div class="bottom">
+            <div class="buttons">
+                <button id="generator">Продолжить рассказ</button>
+                <button id="update" disabled="true">Сменить текст</button>
+                <button id="audio-play" disabled="true">Озвучить</button>
+            </div>
+            <a href="https://www.donationalerts.com/r/begov">Помогите проекту продолжать работать</a>
         </div>
     </div>
 </body>
