@@ -311,6 +311,9 @@ button:hover {
   .photo {
     width: 35px;
   }
+  .pay {
+    width: 90%;
+  }
   .pay p {
     font-size: 17px;
   }
