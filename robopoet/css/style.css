@@ -41,6 +41,16 @@ h1 span {
   opacity: 0;
   z-index: 99;
 }
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info a {
+  text-align: center;
+  color: #0a47b8;
+  margin: 0 10px;
+}
 .success {
   background: #219b21;
 }
@@ -141,15 +151,12 @@ button:hover {
   align-items: center;
 }
 .bottom .buttons {
+  align-self: flex-start;
   display: flex;
 }
 .bottom .buttons button:disabled {
   background: rgba(10, 71, 184, 0.541);
   cursor: not-allowed;
-}
-.bottom a {
-  color: #0a47b8;
-  margin: 0 10px;
 }
 .heading {
   display: flex;
@@ -176,15 +183,22 @@ button:hover {
   width: 100%;
   border-radius: 50%;
 }
+.pay {
+  width: 70%;
+  margin: 0 auto;
+}
 .pay p {
   text-align: center;
   font-size: 20px;
   margin: 40px 0;
 }
+.pay span {
+  text-align: center;
+  display: inline-block;
+}
 .pay .pay-item {
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 70%;
   margin: 0 auto;
   margin-top: 30px;
   box-shadow: 0px 0px 20px #ccc;
@@ -247,6 +261,11 @@ button:hover {
 .showChips {
   transform: translateX(-50%) translateY(0) !important;
 }
+@media screen and (max-width: 1049px) {
+  .info {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 999px) {
   .bottom {
     flex-direction: column;
@@ -264,6 +283,9 @@ button:hover {
     text-align: center;
     font-size: 20px;
     margin-top: -20px;
+  }
+  .vk {
+    margin: 50px auto 0 auto;
   }
 }
 @media screen and (max-width: 599px) {

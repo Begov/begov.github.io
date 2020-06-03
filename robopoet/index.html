@@ -25,10 +25,6 @@
     </div>
 
     <div class="container">
-        <div id="vk-banner">
-            <div id="close">&#10008;</div>
-            <a href="https://vk.com/chief_anonymous"><p>Подпишись на нас в Вк и узнавай много интересного</p></a>
-        </div>
         <div class="heading">
             <h1><span>Robo</span>Roet</h1>
             <div class="anonymous">
@@ -48,15 +44,26 @@
                 <button id="update" disabled="true">Сменить текст</button>
                 <button id="audio-play" disabled="true">Озвучить</button>
             </div>
-            <a href="https://www.donationalerts.com/r/begov">Помогите проекту продолжать работать</a>
+            <div class="vk">
+                <div id="vk_groups"></div>
+            </div>
         </div>
     </div>
 
     <div class="container">
         <div class="pay">
-            <p>Те, кто уже поддержал проект!</p>
+            <div class="info">
+                <p>Те, кто уже поддержал проект!</p>
+                <a href="https://www.donationalerts.com/r/begov">Помогите проекту продолжать работать</a>
+            </div>
         </div>
     </div>
+
+
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+    <script type="text/javascript">
+    VK.Widgets.Group("vk_groups", {mode: 1}, 153467302);
+    </script>
 
 </body>
 </html>
