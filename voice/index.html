@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/chips.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf6UQAVAAAAANHFvexhUcAcPt0T0hzd_qnlKBx9"></script>
+</head>
+<body>
+
+    <audio src="" id="audio"></audio>
+    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+    <div class="container">
+        <div class="heading">
+            <h1>Озвучка текста <span>онлайн</span></h1>
+            <div class="anonymous">
+                <div class="photo">
+                    <a href="https://vk.com/chief_anonymous"><img src="https://sun1-83.userapi.com/c857616/v857616527/4d864/Y8MAZBOxQVI.jpg?ava=1" alt="Anonymous"></a>
+                </div>
+                <div class="title">
+                    <h3><a href="https://vk.com/chief_anonymous"><h3>Anonymous</h3></a></h3>
+                    <p><a href="https://vk.com/chief_anonymous">Узнай больше</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="buttons">
+                <select id="vote">
+                    <option value="ermilov">Ermilov</option>
+                    <option value="silaerkan">Silaerkan</option>
+                    <option value="anton_samokhvalov">Samokhv</option>
+                    <option value="tanya">Tanya</option>
+                    <option value="smoky">Smoky</option>
+                    <option value="zombie">Zombie</option>
+                    <option value="oksana">Oksana</option>
+                    <option value="jane">Jane</option>
+                    <option value="omazh">Mozhara</option>
+                    <option value="kolya">Kolya</option>
+                    <option value="kostya" selected>Kostya</option>
+                    <option value="nastya">Nastya</option>
+                    <option value="sasha">Sasha</option>
+                    <option value="nick">Nick</option>
+                    <option value="erkanyavas">Erkanyav</option>
+                    <option value="zhenya">Zhenya</option>
+                    <option value="tatyana_abramova">tanya</option>
+                    <option value="voicesearch">Search</option>
+                    <option value="alyss">Alyss</option>
+                    <option value="ermil_with_tuning">Ermilla</option>
+                    <option value="robot">Zahar</option>
+                    <option value="dude">Dude</option>
+                    <option value="levitan">Levitan</option>
+                </select>
+                <select id="lang">
+                    <option value="ru-RU">Русский</option>
+                    <option value="en-US">Английский</option>
+                    <option value="uk-UA">Украинский</option>
+                    <option value="tr-TR">Турецкий</option>
+                </select>
+                <select id="emotion">
+                    <option value="neutral">Нейтральный</option>
+                    <option value="good">Дружеский</option>
+                    <option value="evil">Раздражен</option>
+                </select>
+                <select id="speed">
+                    <option value="0.1">0.1</option>
+                    <option value="0.2">0.2</option>
+                    <option value="0.3">0.3</option>
+                    <option value="0.4">0.4</option>
+                    <option value="0.5">0.5</option>
+                    <option value="0.6">0.6</option>
+                    <option value="0.7">0.7</option>
+                    <option value="0.8">0.8</option>
+                    <option value="0.9">0.9</option>
+                    <option value="1.0" selected>Скорость</option>
+                    <option value="1.1">1.1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.3">1.3</option>
+                    <option value="1.4">1.4</option>
+                    <option value="1.5">1.5</option>
+                    <option value="1.6">1.6</option>
+                    <option value="1.7">1.7</option>
+                    <option value="1.8">1.8</option>
+                    <option value="1.9">1.9</option>
+                    <option value="2.0">2.0</option>
+                </select>
+            </div>
+        </div>
+        <div class="content" contenteditable="true" placeholder="Напишите текст для озвучки">
+            Для начала работы введите Ваш текст в это поле. Подберите подходящий голос и скорость. Чтобы добиться наилучшего результата поиграйте знаками препинания. Вы так же можете менять ударение знаком плюс. Например: красивее, или красиве+е. Вы можете делать паузы при помощи пунктира. Например: - - - - - - - - - - это была пауза. Количество символов ограничено.
+        </div>
+        <div class="bottom">
+            <div class="buttons">
+                <button id="play">Озвучить</button>
+                <button id="download">Скачать</button>
+            </div>
+            <div class="vk">
+                <div id="vk_groups"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pay">
+            <div class="info">
+                <p>Те, кто уже поддержал проект!</p>
+                <a href="https://www.donationalerts.com/r/begov">Помогите проекту сохранить настройки</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+    <script type="text/javascript">
+    VK.Widgets.Group("vk_groups", {mode: 1}, 153467302);
+    </script>
+
+    <script>
+       function getKey() {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6Lf6UQAVAAAAANHFvexhUcAcPt0T0hzd_qnlKBx9', {action: 'homepage'}).then(function(token) {
+                document.getElementById('g-recaptcha-response').value = token;
+                });
+            });
+       }
+
+       getKey();
+
+    </script>
+
+</body>
+</html>
