@@ -102,7 +102,7 @@ playButton.addEventListener('click', function() {
   for(let i = 0; i < bottleAll.length; i++) {
     timeouts[i] = setTimeout(() => {
       bottleAll[i].style.top = randomNumber(20, 90) + '%';
-    }, randomNumber(15000, 270000));
+    }, randomNumber(10000, 120000));
   }
   
 });
