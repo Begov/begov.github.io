@@ -4,7 +4,7 @@ const heart = document.querySelector('#heart'),
       playButton = document.querySelector('#play button'),
       spot = document.querySelector('#spot');
 
-const statusHTML = `<div id="status" class="status">Найдено писем: <span id="out">0</span> / 10 <img src="img/svg/status.svg" alt="Письмо"></div>`;
+const statusHTML = `<div id="status" class="status">Найдено писем: <span id="out">0</span> / 6 <img src="img/svg/status.svg" alt="Письмо"></div>`;
 
 const bottle = [
 
@@ -102,13 +102,20 @@ playButton.addEventListener('click', function() {
   for(let i = 0; i < bottleAll.length; i++) {
     timeouts[i] = setTimeout(() => {
       bottleAll[i].style.top = randomNumber(20, 90) + '%';
-    }, randomNumber(1111, 2222));
+    }, randomNumber(15000, 270000));
   }
   
 });
 
+let count = 0;
+
 document.body.addEventListener('click', function(e) {
   if(e.target.classList.contains('bottle')) {
+
+    e.target.remove();
+
+    count++;
+    document.querySelector('#out').textContent = count;
 
     let text = document.querySelector('#text'),
         modal = document.querySelector('#modal');
@@ -117,5 +124,4 @@ document.body.addEventListener('click', function(e) {
     text.innerHTML = bottle[e.target.getAttribute('data-id')];
     modal.classList.add('show');
   }
-  if(e.target.classList.contains('heart-block')) alert('heart-block');
 });
