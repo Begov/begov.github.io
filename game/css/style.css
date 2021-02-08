@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url('../mediafiles/gif/space.gif');
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.game-status {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background: #000000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #fff;
+}
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.player,
+.enemy {
+  opacity: 0.7;
+  border-radius: 50%;
+  position: absolute;
+}
+.player {
+  background: #125dbe;
+}
+.enemy {
+  background: #c91515;
+  transition: left 10s, top 10s ease;
+}
+.potion {
+  position: absolute;
+  width: 30px;
+}
+@media screen and (max-width: 1170px) {
+  .potion {
+    width: 27px;
+  }
+}
