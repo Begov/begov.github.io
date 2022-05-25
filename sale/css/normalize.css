@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input,
+textarea,
+button,
+select {
+  border: none;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: 600;
+}
+img {
+  display: block;
+}

