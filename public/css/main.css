@@ -94,6 +94,9 @@ header .icon {
   color: #7410f7;
   font-size: 30px;
 }
+.reviews-wrapp {
+  overflow: hidden !important;
+}
 section {
   padding: 60px 0;
 }
