@@ -9,7 +9,7 @@ ya.addEventListener('click', function(e) {
     if(window.pageYOffset + 20 >= pageY) {
       clearInterval(interval);
     } else {
-      scrollY += 8;
+      scrollY += 20;
       scrollTo(0, scrollY);
     }
   }, 5);
