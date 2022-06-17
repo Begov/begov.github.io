@@ -3,6 +3,10 @@ body {
   color: #141c3a;
 }
 
+.slick-dots {
+  bottom: -30px !important;
+}
+
 .slick-dots li button:before {
   width: 13px !important;
   height: 13px !important;
@@ -14,6 +18,33 @@ body {
 .slick-dots li.slick-active button:before {
   background: #7410f7 !important;
   border: 2px solid #7410f7 !important;
+}
+
+.success {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  p {
+    margin: 20px 0;
+  }
+  a {
+    display: inline-block;
+  }
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .container {
@@ -36,11 +67,25 @@ body {
   }
 }
 
+header.hr {
+  border-bottom: 1px solid #e6ecf8;
+  position: relative;
+  .photo {
+    position: absolute;
+    width: 100px;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 15px !important;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px !important;
+  }
   .logo {
     width: 50px;
   }
@@ -55,10 +100,64 @@ header {
       }
     }
   }
+  .icon {
+    color: #7410f7;
+    font-size: 30px;
+  }
 }
 
 section {
   padding: 60px 0;
+  .form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      h1 {
+        text-align: center;
+      }
+    }
+    form {
+      width: 700px;
+      margin: 70px auto 0 auto;
+      .form-wrapp {
+        display: flex;
+      }
+      .input-wrapp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        label {
+          margin-bottom: 10px;
+          color: rgba(41, 51, 71, 0.65);
+        }
+        input, textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #e6ecf8;
+          font-size: 18px;
+          border-radius: 5px;
+        }
+        textarea {
+          resize: vertical;
+          min-height: 200px;
+        }
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+      button {
+        background: transparent;
+        cursor: pointer;
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
   .title-wrapp {
     text-align: center;
     max-width: 700px;
@@ -355,6 +454,12 @@ footer {
   }
 }
 
+@media screen and(max-width: 799px) {
+  section .form form {
+    width: 100%;
+  }
+}
+
 @media screen and(max-width: 499px) {
   section.bg .info-block h2 {
     font-size: 20px;
@@ -378,13 +483,7 @@ footer {
   .btn {
     padding: 7px 20px;
   }
-}
-
-@media screen and(max-width: 699px) {
-  section {
-    padding: 30px 0;
-  }
-  .bg {
-    margin-bottom: 30px;
+  section .form form .form-wrapp {
+    flex-direction: column;
   }
 }
