@@ -412,7 +412,7 @@ footer .container nav ul li:first-child {
   opacity: 1;
 }
 .progress-show .progress-line {
-  animation: progressShow 1.2s linear 1;
+  animation: progressShow 1s linear 1;
 }
 @keyframes progressShow {
   0% {
