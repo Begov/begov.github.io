@@ -243,6 +243,7 @@ section .progress-bar .progress-block .progress-title {
 section .progress-bar .progress-block .progress-line {
   z-index: 1;
   background: rgba(117, 60, 250, 0.3);
+  opacity: 0;
 }
 section .progress-bar .progress-block .progress-info {
   z-index: 3;
@@ -416,6 +417,7 @@ footer .container nav ul li:first-child {
 }
 .progress-show .progress-line {
   animation: progressShow 1s linear 1;
+  opacity: 1 !important;
 }
 @keyframes progressShow {
   0% {

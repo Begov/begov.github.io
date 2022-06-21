@@ -246,11 +246,11 @@ section {
         z-index: 2;
         background: #743cfa;
         color: #fff;
-        // font-weight: bold;
       }
       .progress-line {
         z-index: 1;
         background: rgba(117, 60, 250, 0.3);
+        opacity: 0;
       }
       .progress-info {
         z-index: 3;
@@ -435,6 +435,7 @@ footer {
 .progress-show {
   .progress-line {
     animation: progressShow 1s linear 1;
+    opacity: 1 !important;
   }
 }
 
