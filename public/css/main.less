@@ -415,6 +415,20 @@ footer {
   }
 }
 
+// Анимации
+
+.progress-show {
+  .progress-line {
+    animation: progressShow 1.2s linear 1;
+  }
+}
+
+@keyframes progressShow {
+  0% {
+    width: 0;
+  }
+}
+
 @media screen and(max-width: 999px) {
   header .action, .btn {
     font-size: 16px;
@@ -461,6 +475,23 @@ footer {
 @media screen and(max-width: 799px) {
   section .form form {
     width: 100%;
+  }
+  main {
+    .form-section {
+      padding: 40px 0 !important;
+    }
+    section {
+      padding: 30px 0;
+      &:nth-child(1) {
+        padding-top: 30px;
+      }
+      &:nth-child(2) {
+        padding: 60px 0;
+      }
+      &:nth-child(3) {
+        padding-top: 60px;
+      }
+    }
   }
 }
 

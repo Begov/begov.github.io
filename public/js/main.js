@@ -1,6 +1,32 @@
 const ya = document.querySelector('.ya');
 const infoBlock = document.querySelector('.info-block');
 
+const animateAll = document.querySelectorAll('.animate');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+}
+
+const animateCss = function(elements, observer) {
+  elements.forEach(element => {
+    if(element.intersectionRatio > 0) {
+      addAnimate(element.target);
+    }
+  });
+}
+
+const observer = new IntersectionObserver(animateCss, options);
+
+animateAll.forEach(element => {
+  observer.observe(element);
+});
+
+const addAnimate = function(element) {
+  element.classList.add(element.getAttribute('data-animate'));
+}
+
 ya.addEventListener('click', function(e) {
   e.preventDefault();
   let scrollY = window.pageYOffset;

@@ -401,6 +401,14 @@ footer .container nav ul li {
 footer .container nav ul li:first-child {
   margin-left: 0;
 }
+.progress-show .progress-line {
+  animation: progressShow 1.2s linear 1;
+}
+@keyframes progressShow {
+  0% {
+    width: 0;
+  }
+}
 @media screen and (max-width: 999px) {
   header .action,
   .btn {
@@ -447,6 +455,21 @@ footer .container nav ul li:first-child {
 @media screen and (max-width: 799px) {
   section .form form {
     width: 100%;
+  }
+  main .form-section {
+    padding: 40px 0 !important;
+  }
+  main section {
+    padding: 30px 0;
+  }
+  main section:nth-child(1) {
+    padding-top: 30px;
+  }
+  main section:nth-child(2) {
+    padding: 60px 0;
+  }
+  main section:nth-child(3) {
+    padding-top: 60px;
   }
 }
 @media screen and (max-width: 499px) {
