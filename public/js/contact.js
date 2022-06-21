@@ -2,6 +2,14 @@ const success = document.querySelector('.success');
 const form = document.querySelector('form');
 const submit = document.querySelector('form button');
 
+const transform = document.querySelectorAll('.transform-0');
+
+setTimeout(() => {
+  transform.forEach(element => {
+    element.classList.add('transform-show');
+  });
+}, 0);
+
 submit.addEventListener('click', function(e) {
   e.preventDefault();
   let message = '';
