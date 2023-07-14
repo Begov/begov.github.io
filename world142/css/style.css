@@ -70,6 +70,7 @@ nav ul {
 }
 #mob-menu nav ul {
   flex-direction: column;
+  text-align: center;
 }
 #mob-menu nav ul li {
   margin-top: 15px;
