@@ -395,7 +395,7 @@ footer .footer_right-content nav ul li:hover::after {
     height: 300px;
   }
   section.server-info .server-online h3 {
-    margin-top: 33px;
+    margin-top: 35px;
   }
   footer {
     height: 170px;
@@ -443,7 +443,7 @@ footer .footer_right-content nav ul li:hover::after {
     height: 300px;
   }
   section.server-info .server-description h3 {
-    margin-top: 37px;
+    margin-top: 39px;
     font-size: 18px;
   }
   section.server-info .server-description p {
