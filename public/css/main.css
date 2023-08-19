@@ -205,8 +205,10 @@ section .info .title span {
   color: rgba(10, 10, 10, 0.9);
 }
 section .info .portrait {
+  border-radius: 50%;
   margin-top: 50px;
   width: 270px;
+  overflow: hidden;
 }
 section .progress-bar {
   display: flex;
