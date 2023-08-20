@@ -74,6 +74,10 @@ header.hr .photo {
   left: 50%;
   transform: translateX(-50%);
 }
+header.hr .photo img {
+  border-radius: 50%;
+  overflow: hidden;
+}
 header .container {
   display: flex;
   justify-content: space-between;
