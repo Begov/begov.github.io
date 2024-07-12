@@ -91,62 +91,6 @@
         <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons">Instagram icons created by Pixel perfect - Flaticon</a>
       </div>
     </div>
-    <div id="WidgetVerticalBlockId"></div>
-    <div id="WidgetRoomsListId"></div>
-    <div id="WidgetHorizontalAvailabilityCalendarId"></div>
   </footer>
-  <script type="text/javascript">
-    (function(k,o,t,e,l){
-        l = document.createElement("script");
-        l.type = "text/javascript";
-        l.src = "https://bookonline24.ru/widget.js";
-        l.async = !0;
-        l.onload = l.onreadystatechange = function() {
-            e = this.readyState;
-            !o && (!e || e === "complete") && (o = 1) && k();
-        };
-        t = document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(l, t);
-    })(function(){
-        HotelWidget.init({
-            // ID организации; ID html элемента нужно проставить ниже в поле container
-            hotelId: "8ba7892e-18fb-408d-aca8-a4ef3384ae50",
-            version: "2",
-            baseUrl: "https://bookonline24.ru/",
-            hooks: {
-                onError: function(e) { console.error("onError", e); },
-                onInit: function() { console.log("onInit"); },
-                onBooking: function(v) { console.log("onBooking", v) }
-            }
-        }); 
-
-        <!-- Поиск и бронирование номеров — вертикальный блок -->
-        HotelWidget.add({
-            type: "verticalBlock",
-            appearance: {
-                // Замените на ID html элемента, в который нужно вставить виджет
-                container: "WidgetVerticalBlockId"
-            }
-        });
-
-        <!-- Бронирование номеров -->
-        HotelWidget.add({
-            type: "roomsList",
-            appearance: {
-                // Замените на ID html элемента, в который нужно вставить виджет
-                container: "WidgetRoomsListId"
-            }
-        });
-
-        <!-- Просмотр календаря доступности — горизонтальный блок -->
-        HotelWidget.add({
-            type: "horizontalAvailabilityCalendar",
-            appearance: {
-                // Замените на ID html элемента, в который нужно вставить виджет
-                container: "WidgetHorizontalAvailabilityCalendarId"
-            }
-        });
-    });
-</script>
 </body>
 </html>
