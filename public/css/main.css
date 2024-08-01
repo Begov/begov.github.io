@@ -227,6 +227,10 @@ section .info .portrait {
   min-width: 270px;
   overflow: hidden;
 }
+section .info .portrait img {
+  height: 100%;
+  object-fit: cover;
+}
 section .progress-bar {
   display: flex;
   flex-direction: column;
