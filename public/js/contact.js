@@ -34,7 +34,7 @@ submit.addEventListener('click', function(e) {
   });
 
   if(sendMessage) {
-    fetch(encodeURI(`https://api.telegram.org/bot5467005733:AAFsGUoPRjNmZf_qNzPqEr4H1GE9nu53Wug/sendMessage?chat_id=2021259438&text=${message}`))
+    fetch(encodeURI(`https://api.telegram.org/bot7953569902:AAGWRU-0XjCAt36kSakg4kMW9eToruwf_Xk/sendMessage?chat_id=7241209665&text=${message}`))
     .then(data => data.json())
     .then(data => {
       success.classList.add('show');
