@@ -231,6 +231,30 @@ section .info .portrait img {
   height: 100%;
   object-fit: cover;
 }
+section .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 60px auto 0 auto;
+}
+section .skills .skill {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #151c3a;
+  color: #fff;
+  width: fit-content;
+  border-radius: 50px;
+}
+section .skills .skill img {
+  width: 20px;
+}
+section .skills .skill span {
+  margin-left: 10px;
+}
 section .progress-bar {
   display: flex;
   flex-direction: column;
