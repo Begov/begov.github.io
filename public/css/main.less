@@ -481,19 +481,6 @@ footer {
   opacity: 1;
 }
 
-.progress-show {
-  .progress-line {
-    animation: progressShow 1s linear 1;
-    opacity: 1 !important;
-  }
-}
-
-@keyframes progressShow {
-  0% {
-    width: 0;
-  }
-}
-
 @media screen and(max-width: 999px) {
   header .action, .btn {
     font-size: 16px;
@@ -561,6 +548,9 @@ footer {
 }
 
 @media screen and(max-width: 549px) {
+  section .skills {
+    gap: 10px;
+  }
   footer .container {
     flex-direction: column;
     align-items: center;
