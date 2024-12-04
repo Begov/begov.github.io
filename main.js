@@ -9,6 +9,12 @@ mobMenu.addEventListener('click', function() {
   mobMenu.classList.remove('show-mob-menu');
 });
 
+const cons = document.querySelector('.cons');
+
+cons.addEventListener('click', function() {
+  horizontalModal.classList.add('show-modal');
+});
+
 const verticalModal = document.querySelector('.vertical-modal');
 
 setTimeout(function() {
