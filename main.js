@@ -35,10 +35,10 @@ let slideEnd = 2;
 
 if(window.innerWidth < 879) {
   divider = 1;
-  slideEnd = 2;
+  slideEnd = 1;
 } else {
   divider = 3;
-  slideEnd = 1;
+  slideEnd = 2;
 }
 
 const updateSlider = function(currentIndex, sliderWrap, sliderItems) {
